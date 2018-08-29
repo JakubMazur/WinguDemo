@@ -12,6 +12,7 @@
 		DDD67F6C2136D89F00658198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD67F6A2136D89F00658198 /* Main.storyboard */; };
 		DDD67F6E2136D8A100658198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD67F6D2136D8A100658198 /* Assets.xcassets */; };
 		DDD67F712136D8A100658198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD67F6F2136D8A100658198 /* LaunchScreen.storyboard */; };
+		DDD67F792136D8FD00658198 /* winguSDKEssential.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD67F782136D8FC00658198 /* winguSDKEssential.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DDD67F6D2136D8A100658198 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDD67F702136D8A100658198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDD67F722136D8A100658198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDD67F782136D8FC00658198 /* winguSDKEssential.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = winguSDKEssential.framework; path = Carthage/Build/iOS/winguSDKEssential.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD67F792136D8FD00658198 /* winguSDKEssential.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 		DDD67F5A2136D89F00658198 = {
 			isa = PBXGroup;
 			children = (
+				DDD67F782136D8FC00658198 /* winguSDKEssential.framework */,
 				DDD67F652136D89F00658198 /* WinguDemo */,
 				DDD67F642136D89F00658198 /* Products */,
 			);
@@ -74,6 +78,7 @@
 				DDD67F5F2136D89F00658198 /* Sources */,
 				DDD67F602136D89F00658198 /* Frameworks */,
 				DDD67F612136D89F00658198 /* Resources */,
+				DDD67F7B2136D90B00658198 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -129,6 +134,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DDD67F7B2136D90B00658198 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/winguSDKEssential.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/winguSDKEssential.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DDD67F5F2136D89F00658198 /* Sources */ = {
@@ -281,7 +305,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9232HDTN9M;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WinguDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,7 +327,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9232HDTN9M;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = WinguDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

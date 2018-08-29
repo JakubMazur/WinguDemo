@@ -1,0 +1,11 @@
+framework module winguSDKEssential {
+  umbrella header "winguSDKEssential.h"
+
+  export *
+  module * { export * }
+}
+
+module winguSDKEssential.Swift {
+    header "winguSDKEssential-Swift.h"
+    requires objc
+}

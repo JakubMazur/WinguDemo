@@ -1,0 +1,18 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "0.4.5",
+  "iOS" : [
+    {
+      "name" : "winguSDKEssential",
+      "hash" : "130756145be737b28fc426a87d10811376aa3127f3f233d81fead42b81d59082"
+    }
+  ]
+}
